@@ -141,7 +141,7 @@
                   'is-selected': selectedRow === tableRow.index,
                   'is-odd': i % 2 === 1 
                 }"
-                :style="{ height: rowHeight + 'px', minWidth: getRowMinWidth() }"
+                :style="{ height: rowHeight == 30 ? 'auto' : rowHeight + 'px', minWidth: getRowMinWidth() }"
                 @mouseenter="onMouseenter(tableRow, i)" 
                 @mouseleave="onMouseleave(tableRow, i)"
                 @click="onClickRow(tableRow, tableRow.index)"
@@ -303,7 +303,7 @@
                     'is-selected': selectedRow === tableRow.index,
                     'is-odd': i % 2 === 1 
                   }"
-                  :style="{ height: rowHeight + 'px' }"
+                  :style="{ height: rowHeight == 30 ? 'auto' : rowHeight + 'px' }"
                   @mouseenter="onMouseenter(tableRow, i, true)" 
                   @mouseleave="onMouseleave(tableRow, i, true)"
                   @click="onClickRow(tableRow, tableRow.index)"
